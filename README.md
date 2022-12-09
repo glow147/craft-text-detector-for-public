@@ -55,7 +55,7 @@ When it comes to train detecting text in high resolution documents, the heatmap 
 
 In fact, the same data processing repeats every epoch. So, it does not necessarily have to be done for every epoch. Therefore, let's preprocess it before we start training.
 
-You can get pretrained model <a href=https://drive.google.com/file/d/1n3XD7rsXicK0ZSYyUdG4LHtnZrcBwdAZ/view?usp=sharing>here</a>
+You can get pretrained model >> https://drive.google.com/file/d/1n3XD7rsXicK0ZSYyUdG4LHtnZrcBwdAZ/view?usp=sharing
 
 Run `preprocess.py`( MultiProcessing ) like below.
 
