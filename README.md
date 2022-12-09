@@ -1,0 +1,1 @@
+# craft-text-detector-for-public
