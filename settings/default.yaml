@@ -1,0 +1,40 @@
+# Input/Output/Name
+original_data_dir: "/data/2022/ocr/document"
+train_data_list_file: "../assets/train.txt"
+valid_data_list_file: "../assets/valid.txt"
+output_path: "outputs"
+model_path: "checkpoints"
+load_chkpt: null # continue training
+name: "test"
+
+# Training parameters
+epochs: 3
+
+# Optimizer configurations
+optimizer: "AdamW"
+lr: 0.00005
+scheduler: "CustomCosineAnnealingWarmupRestarts"
+scheduler_interval: "step"
+scheduler_param:
+  first_cycle_steps: 2000
+  cycle_mult: 2
+  max_lr: 0.0005
+  min_lr: 0.000025
+  warmup_steps: 500
+  gamma: 0.707
+
+# Parameters for model architectures
+craft:
+  weight: "../assets/craft-state-dict.pt"
+  PAD: False
+  image_size: 1536
+  THRESHOLD_POSITIVE: 0.1
+  THRESHOLD_NEGATIVE: 0.0
+  THRESHOLD_FSCORE: 0.5
+  THRESHOLD_WORD: 0.7
+  THRESHOLD_CHARACTER: 0.7
+  THRESHOLD_AFFINITY: 0.3
+  WATERSHED:
+    version: "skimage"
+    sure_fg_th : 0.75
+    sure_bg_th : 0.05
