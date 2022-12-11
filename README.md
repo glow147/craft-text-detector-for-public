@@ -22,6 +22,24 @@ This code is based on https://github.com/YongWookHa/craft-text-detector
 
 # How to use
 
+## Example of data architecture
+
+```
+Dataset( Image Format : jpg, Json Format : json )
+|ㅡㅡ 1.원천데이터
+|      |ㅡㅡ OCR(public)
+|      |       |ㅡㅡ AF
+|      |       |     |ㅡㅡ ...
+|      |       |ㅡㅡ CST
+|      |       |     |ㅡㅡ ...
+|ㅡㅡ 2.라벨링데이터
+|      |ㅡㅡ OCR(public)
+|      |       |ㅡㅡ AF
+|      |       |     |ㅡㅡ ...
+|      |       |ㅡㅡ CST
+|      |       |     |ㅡㅡ ...
+```
+
 ## Prepare your data
 
 First of all, write your own Dataloader code.
